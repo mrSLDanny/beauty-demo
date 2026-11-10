@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Студия маникюра Анны — Санкт-Петербург (демо)</title>
+<meta name="description" content="Демо-сайт мастера маникюра: услуги, цены, работы, отзывы и онлайн-запись через Telegram-бота.">
+<meta property="og:title" content="Студия маникюра Анны — демо-сайт">
+<meta property="og:description" content="Пример сайта для бьюти-мастера с онлайн-записью в Telegram. Хотите такой же? Instagram @daniil_mickhailovich">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf2ef;--bg2:#f3e4e1;--card:#fffaf8;--rose:#c48a8e;--rose-d:#a96f74;--rose-l:#ecd5d3;--ink:#3e3236;--muted:#8a6a70;--line:#ead9d6;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.demo-bar{background:var(--ink);color:#f7e9e6;text-align:center;font-size:13px;padding:8px 16px}
+.demo-bar a{color:#f3c6c8}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(250,242,239,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:600;text-decoration:none;letter-spacing:.3px}
+.logo span{color:var(--rose)}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}.nav ul a:hover{color:var(--rose-d)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--rose);color:#fff;text-decoration:none;font-weight:600;border-radius:999px;padding:14px 28px;transition:.25s;box-shadow:0 10px 25px -10px rgba(169,111,116,.7);border:0;cursor:pointer;font-size:16px}
+.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.big{font-size:20px;padding:20px 44px}
+.btn.ghost{background:transparent;color:var(--rose-d);box-shadow:none;border:1.5px solid var(--rose)}
+.btn.ghost:hover{background:var(--rose-l)}
+.nav .btn{padding:10px 20px;font-size:14px}
+.hero{position:relative;overflow:hidden;padding:90px 0 100px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:var(--bg2);z-index:-1}
+.hero:before{width:520px;height:520px;right:-140px;top:-160px}
+.hero:after{width:300px;height:300px;left:-120px;bottom:-140px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);font-weight:600;position:relative;padding-top:18px}
+.eyebrow:before{content:"";position:absolute;top:0;left:0;width:48px;height:4px;border-radius:4px;background:var(--rose)}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.08}
+h1{font-size:clamp(44px,6vw,76px);margin:14px 0 20px}
+h1 em{color:var(--rose);font-style:italic}
+.lead{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:34px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.facts b{display:block;font-family:"Cormorant Garamond",serif;font-size:34px;color:var(--rose-d);line-height:1}
+.facts span{font-size:13px;color:var(--muted)}
+.hero-art{position:relative;aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);overflow:hidden;background:linear-gradient(160deg,#f1d9d6,#e6c1c0);box-shadow:0 30px 60px -30px rgba(120,70,75,.5)}
+.hero-art svg{width:100%;height:100%;display:block}
+.badge{position:absolute;left:16px;bottom:40px;background:var(--card);border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px -18px rgba(120,70,75,.45);font-size:14px;display:flex;gap:12px;align-items:center}
+.badge i{font-style:normal;font-size:26px}
+.badge b{display:block}
+section{padding:90px 0}
+.head{text-align:center;max-width:640px;margin:0 auto 50px}
+.head .eyebrow:before{left:50%;transform:translateX(-50%)}
+h2{font-size:clamp(36px,4.5vw,54px);margin:12px 0 12px}
+.head p{color:var(--muted)}
+.services{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid-s{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.svc{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:10px;transition:.25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 20px 40px -25px rgba(120,70,75,.45);border-color:var(--rose-l)}
+.svc .ic{width:52px;height:52px;border-radius:16px;background:var(--rose-l);display:grid;place-items:center;font-size:24px}
+.svc h3{font-size:20px;font-weight:600}
+.svc p{color:var(--muted);font-size:15px;flex:1}
+.svc .meta{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
+.svc .price{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:600;color:var(--rose-d)}
+.svc .time{font-size:13px;color:var(--muted);background:var(--card);border-radius:99px;padding:4px 12px;border:1px solid var(--line)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.gallery figure{border-radius:var(--r);overflow:hidden;position:relative;cursor:zoom-in}
+.gallery figure:nth-child(1){grid-row:span 2}.gallery figure:nth-child(4){grid-column:span 2}
+.gallery svg{width:100%;height:100%;display:block;transition:transform .6s}
+.gallery figure:hover svg{transform:scale(1.06)}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,250,248,.9);border-radius:99px;padding:5px 14px;font-size:13px}
+.note{text-align:center;font-size:13px;color:var(--muted);margin-top:16px}
+.reviews{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.grid-r{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:var(--card);border-radius:var(--r);padding:28px;border:1px solid var(--line);position:relative}
+.rev:before{content:"“";position:absolute;right:22px;top:-6px;font-family:"Cormorant Garamond",serif;font-size:90px;color:var(--rose-l)}
+.stars{color:var(--rose);letter-spacing:3px;margin-bottom:10px}
+.rev p{font-size:15px;margin-bottom:18px}
+.who{display:flex;gap:12px;align-items:center;font-size:14px}
+.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700}
+.who small{display:block;color:var(--muted)}
+.contacts .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px}
+.card h3{font-family:"Cormorant Garamond",serif;font-size:32px;margin-bottom:18px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--line)}
+.hours li span:last-child{font-weight:600}
+.addr p{margin-bottom:12px}.addr b{color:var(--rose-d)}
+.map{margin-top:18px;border-radius:16px;overflow:hidden;height:190px;background:var(--bg2)}
+.map svg{width:100%;height:100%}
+.cta{padding:100px 0;text-align:center;position:relative;overflow:hidden}
+.cta .box{background:var(--ink);color:#f7e9e6;border-radius:36px;padding:70px 30px;position:relative;overflow:hidden}
+.cta .box:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:rgba(196,138,142,.25);right:-120px;top:-150px}
+.cta h2{color:#fff}.cta p{color:#e6cfcc;max-width:540px;margin:0 auto 34px}
+.cta small{display:block;margin-top:18px;color:#c9aeb0}
+footer{padding:34px 0 50px;text-align:center;font-size:14px;color:var(--muted)}
+footer a{color:var(--rose-d);font-weight:600}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;display:none}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.on{opacity:1;transform:none}
+.lb{position:fixed;inset:0;background:rgba(40,28,31,.85);display:none;place-items:center;z-index:50;padding:20px}
+.lb.on{display:grid}.lb>div{width:min(560px,92vw);aspect-ratio:1;border-radius:24px;overflow:hidden}.lb svg{width:100%;height:100%}
+@media(max-width:900px){
+ .nav ul{display:none}
+ .hero{padding:50px 0 70px}.hero .wrap{grid-template-columns:1fr}.hero-art{max-width:420px;margin:0 auto;width:100%}
+ .badge{left:10px}
+ .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}.gallery figure:nth-child(4){grid-column:span 2}
+ .grid-r,.contacts .wrap{grid-template-columns:1fr}
+ section{padding:64px 0}
+ .float{display:block}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="demo-bar">Это демо-сайт вымышленной студии — пример того, что мы делаем для мастеров. Хотите такой же? <a href="https://www.instagram.com/daniil_mickhailovich/" target="_blank" rel="noopener">Instagram @daniil_mickhailovich</a></div>
+
+<header class="nav"><div class="wrap">
+ <a class="logo" href="#top">Студия <span>Анны</span></a>
+ <ul><li><a href="#services">Услуги</a></li><li><a href="#works">Работы</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#contacts">Контакты</a></li></ul>
+ <a class="btn" href="https://t.me/herzen_beauty_demo_bot" target="_blank" rel="noopener">Записаться</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="eyebrow">Маникюр · педикюр · СПб</span>
+  <h1>Ухоженные руки&nbsp;—<br><em>без лишних хлопот</em></h1>
+  <p class="lead">Аккуратный маникюр, стойкое покрытие до 4 недель и нежный дизайн в уютной студии в центре Петербурга. Запись онлайн за 30 секунд — в Telegram, в любое время.</p>
+  <div class="actions">
+   <a class="btn big" href="https://t.me/herzen_beauty_demo_bot" target="_blank" rel="noopener">💅 Записаться</a>
+   <a class="btn ghost" href="#services">Услуги и цены</a>
+  </div>
+  <div class="facts"><div><b>7 лет</b><span>опыта мастера</span></div><div><b>1 500+</b><span>довольных клиентов</span></div><div><b>4,9 ★</b><span>средняя оценка</span></div></div>
+ </div>
+ <div class="hero-art">
+  <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-label="Иллюстрация: рука с маникюром">
+   <defs>
+    <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dfd6"/><stop offset="1" stop-color="#eccabf"/></linearGradient>
+    <linearGradient id="nl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d79da1"/><stop offset="1" stop-color="#b9767c"/></linearGradient>
+   </defs>
+   <circle cx="320" cy="90" r="70" fill="#f7e6e3" opacity=".7"/><circle cx="60" cy="420" r="90" fill="#f7e6e3" opacity=".5"/>
+   <g transform="translate(70 120)">
+    <path d="M40 380 C30 300 20 240 40 190 L60 120 C64 104 84 104 86 122 L90 180 L104 60 C107 40 132 40 134 62 L136 170 L150 40 C153 18 180 18 182 42 L180 170 L196 70 C200 50 226 52 226 74 L218 200 L236 160 C246 140 272 148 264 172 L226 290 C214 330 200 360 196 380 Z" fill="url(#sk)"/>
+    <rect x="106" y="44" width="26" height="36" rx="13" fill="url(#nl)"/><rect x="152" y="24" width="28" height="38" rx="14" fill="url(#nl)"/>
+    <rect x="199" y="56" width="25" height="34" rx="12.5" fill="url(#nl)"/><rect x="63" y="108" width="22" height="30" rx="11" fill="url(#nl)"/>
+    <rect x="243" y="148" width="22" height="28" rx="11" transform="rotate(25 254 162)" fill="url(#nl)"/>
+    <g fill="#fff" opacity=".7"><circle cx="113" cy="54" r="3"/><circle cx="160" cy="34" r="3"/><circle cx="206" cy="66" r="3"/><circle cx="69" cy="116" r="2.5"/></g>
+   </g>
+   <g fill="#fff" opacity=".9"><path d="M330 300 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M60 160 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/></g>
+  </svg>
+  <div class="badge"><i>📅</i><div><b>Свободно сегодня</b><span style="color:var(--muted)">запись в Telegram 24/7</span></div></div>
+ </div>
+</div></section>
+
+<section class="services" id="services"><div class="wrap">
+ <div class="head reveal"><span class="eyebrow">Прайс</span><h2>Услуги и цены</h2><p>Стерильные инструменты, одноразовые пилки и только проверенные материалы.</p></div>
+ <div class="grid-s">
+  <div class="svc reveal"><div class="ic">🤍</div><h3>Маникюр без покрытия</h3><p>Комбинированный маникюр, форма, уход за кутикулой и питательное масло.</p><div class="meta"><span class="price">1 200 ₽</span><span class="time">45 мин</span></div></div>
+  <div class="svc reveal"><div class="ic">💅</div><h3>Маникюр + гель-лак</h3><p>Выравнивание, стойкое покрытие до 4 недель, более 200 оттенков.</p><div class="meta"><span class="price">2 200 ₽</span><span class="time">1 ч 30 мин</span></div></div>
+  <div class="svc reveal"><div class="ic">✨</div><h3>Наращивание ногтей</h3><p>Гель на формах, любая длина и форма — миндаль, овал, квадрат.</p><div class="meta"><span class="price">3 500 ₽</span><span class="time">2 ч 30 мин</span></div></div>
+  <div class="svc reveal"><div class="ic">🌸</div><h3>Педикюр + гель-лак</h3><p>Аппаратный педикюр, обработка стоп и стойкое покрытие.</p><div class="meta"><span class="price">2 800 ₽</span><span class="time">1 ч 30 мин</span></div></div>
+  <div class="svc reveal"><div class="ic">🎨</div><h3>Дизайн</h3><p>Френч, втирка, стемпинг, ручная роспись — за 1–2 ногтя.</p><div class="meta"><span class="price">300 ₽</span><span class="time">15 мин</span></div></div>
+  <div class="svc reveal" style="background:var(--rose-l);border-color:var(--rose-l)"><div class="ic" style="background:#fff">🎁</div><h3>Первый визит −15%</h3><p>Скидка на любую услугу при первой записи через Telegram-бота.</p><div class="meta"><a class="btn" href="https://t.me/herzen_beauty_demo_bot" target="_blank" rel="noopener" style="padding:10px 20px;font-size:14px">Записаться</a></div></div>
+ </div>
+</div></section>
+
+<section id="works"><div class="wrap">
+ <div class="head reveal"><span class="eyebrow">Портфолио</span><h2>Работы мастера</h2><p>Нежная классика и трендовые дизайны.</p></div>
+ <div class="gallery reveal" id="gallery"></div>
+ <p class="note">Иллюстрации-заглушки для демо. На вашем сайте здесь будут ваши фото работ.</p>
+</div></section>
+
+<section class="reviews" id="reviews"><div class="wrap">
+ <div class="head reveal"><span class="eyebrow">Отзывы</span><h2>Что говорят клиентки</h2><p>Демонстрационные отзывы — имена вымышленные.</p></div>
+ <div class="grid-r">
+  <div class="rev reveal"><div class="stars">★★★★★</div><p>Хожу к Анне уже второй год. Покрытие держится 3–4 недели, ни одного скола. А записываться через бота — просто сказка, никаких переписок.</p><div class="who"><span class="av" style="background:#c48a8e">М</span><div>Мария<small>гель-лак, дизайн</small></div></div></div>
+  <div class="rev reveal"><div class="stars">★★★★★</div><p>Записалась в час ночи за минуту, утром пришло напоминание. Очень уютная студия и идеальный френч!</p><div class="who"><span class="av" style="background:#b9a0a8">Е</span><div>Екатерина<small>маникюр + френч</small></div></div></div>
+  <div class="rev reveal"><div class="stars">★★★★★</div><p>Делала наращивание к свадьбе — получилось лучше, чем на референсе. Перенесла запись в боте в два клика, когда поменялись планы.</p><div class="who"><span class="av" style="background:#d3a59b">А</span><div>Алина<small>наращивание</small></div></div></div>
+ </div>
+</div></section>
+
+<section class="contacts" id="contacts"><div class="wrap">
+ <div class="card reveal"><h3>График работы</h3>
+  <ul class="hours"><li><span>Понедельник — пятница</span><span>10:00 — 20:00</span></li><li><span>Суббота</span><span>10:00 — 20:00</span></li><li><span>Воскресенье</span><span>10:00 — 20:00</span></li><li><span>Онлайн-запись</span><span>24/7 в Telegram</span></li></ul>
+  <div style="margin-top:24px"><a class="btn" href="https://t.me/herzen_beauty_demo_bot" target="_blank" rel="noopener">📅 Выбрать время</a></div>
+ </div>
+ <div class="card addr reveal"><h3>Как нас найти</h3>
+  <p><b>📍</b> Санкт-Петербург, ул. Рубинштейна, 15 <span style="color:var(--muted)">(вымышленный адрес)</span></p>
+  <p><b>🚇</b> м. Достоевская / Владимирская — 5 минут пешком</p>
+  <p><b>📞</b> +7 (900) 000-00-00 <span style="color:var(--muted)">(демо)</span></p>
+  <div class="map"><svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" aria-label="Схема проезда">
+   <rect width="400" height="190" fill="#f3e4e1"/>
+   <g stroke="#fffaf8" stroke-width="14" fill="none"><path d="M0 60 H400"/><path d="M0 140 H400"/><path d="M90 0 V190"/><path d="M250 0 V190"/></g>
+   <g stroke="#fffaf8" stroke-width="6" fill="none"><path d="M0 100 H400"/><path d="M170 0 V190"/><path d="M330 0 V190"/></g>
+   <path d="M0 20 C120 40 220 0 400 30" stroke="#d9c3c8" stroke-width="10" fill="none"/>
+   <circle cx="250" cy="100" r="22" fill="#c48a8e" opacity=".25"/><path d="M250 76 c-10 0 -17 7 -17 16 0 12 17 28 17 28 s17-16 17-28 c0-9 -7-16 -17-16z" fill="#a96f74"/><circle cx="250" cy="92" r="6" fill="#fff"/>
+   <text x="268" y="128" font-family="Manrope,sans-serif" font-size="12" fill="#3e3236">Студия Анны</text>
+   <circle cx="90" cy="140" r="9" fill="#fff" stroke="#c48a8e" stroke-width="3"/><text x="104" y="160" font-family="Manrope,sans-serif" font-size="11" fill="#8a6a70">м. Достоевская</text>
+  </svg></div>
+ </div>
+</div></section>
+
+<section class="cta"><div class="wrap"><div class="box reveal">
+ <h2>Запишитесь онлайн — за 30 секунд</h2>
+ <p>Выберите услугу, дату и удобное время в Telegram. Бот пришлёт подтверждение и напомнит о визите.</p>
+ <a class="btn big" href="https://t.me/herzen_beauty_demo_bot" target="_blank" rel="noopener">💅 Записаться</a>
+ <small>Откроется Telegram-бот @herzen_beauty_demo_bot</small>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">Демо-сайт от команды выпускников РГПУ им. Герцена — хотите такой же? Instagram <a href="https://www.instagram.com/daniil_mickhailovich/" target="_blank" rel="noopener">@daniil_mickhailovich</a></div></footer>
+
+<a class="btn float" href="https://t.me/herzen_beauty_demo_bot" target="_blank" rel="noopener">💅 Записаться</a>
+<div class="lb" id="lb"><div></div></div>
+
+<script>
+// Генеративные иллюстрации «работ» (SVG), без сторонних фото
+const works=[
+ {t:"Нюд + блёстки",bg:["#f4dcd8","#e9c3c1"],nail:["#e8c4bd","#d8a9a4"],dec:"sparkle"},
+ {t:"Френч",bg:["#f7ece9","#ead6d3"],nail:["#f6e3df","#efd3cf"],dec:"french"},
+ {t:"Пыльная роза",bg:["#ecd1d0","#d9adb0"],nail:["#c48a8e","#a96f74"],dec:"none"},
+ {t:"Цветочный дизайн",bg:["#f5e6e2","#ecd0cd"],nail:["#fbf3f1","#efdcd8"],dec:"flower"},
+ {t:"Бордо",bg:["#ead0cf","#d8b0b2"],nail:["#8e3b4a","#6e2735"],dec:"none"},
+ {t:"Втирка «жемчуг»",bg:["#f2e3e0","#e3c9c7"],nail:["#f3ece8","#d9c8cf"],dec:"pearl"},
+ {t:"Минимализм",bg:["#f7ece9","#ecd8d5"],nail:["#d9b2ad","#c99a96"],dec:"line"},
+ {t:"Молочный + блёстки",bg:["#efdcd9","#e2c4c3"],nail:["#f8f0ec","#ecdcd6"],dec:"sparkle"}
+];
+function art(w,i){
+ const g="g"+i,n="n"+i;
+ let nails="";const xs=[70,130,190,250,310],hs=[120,150,160,145,110],ys=[150,110,95,110,160];
+ xs.forEach((x,k)=>{
+  const h=hs[k],y=ys[k];
+  nails+=`<rect x="${x-24}" y="${y}" width="48" height="${h}" rx="24" fill="url(#${n})"/>`;
+  if(w.dec==="french")nails+=`<rect x="${x-24}" y="${y}" width="48" height="22" rx="22" fill="#fff"/>`;
+  if(w.dec==="sparkle"&&k%2==0)for(let s=0;s<6;s++)nails+=`<circle cx="${x-14+((s*13+k*7)%28)}" cy="${y+10+s*9}" r="2.2" fill="#fff" opacity=".9"/>`;
+  if(w.dec==="flower"&&(k==1||k==3)){for(let p=0;p<5;p++){const a=p*72*Math.PI/180;nails+=`<circle cx="${x+Math.cos(a)*9}" cy="${y+50+Math.sin(a)*9}" r="7" fill="#d79da1"/>`}nails+=`<circle cx="${x}" cy="${y+50}" r="4" fill="#f1c27d"/>`}
+  if(w.dec==="pearl")nails+=`<rect x="${x-14}" y="${y+8}" width="10" height="${h-30}" rx="5" fill="#fff" opacity=".55"/>`;
+  if(w.dec==="line")nails+=`<path d="M${x} ${y+16} V${y+h-20}" stroke="#fff" stroke-width="2.5" opacity=".9"/><circle cx="${x}" cy="${y+h-14}" r="3" fill="#fff"/>`;
+  nails+=`<ellipse cx="${x-9}" cy="${y+22}" rx="5" ry="12" fill="#fff" opacity=".35"/>`;
+ });
+ return `<svg viewBox="0 0 380 380" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs>
+ <linearGradient id="${g}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${w.bg[0]}"/><stop offset="1" stop-color="${w.bg[1]}"/></linearGradient>
+ <linearGradient id="${n}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${w.nail[0]}"/><stop offset="1" stop-color="${w.nail[1]}"/></linearGradient></defs>
+ <rect width="380" height="380" fill="url(#${g})"/><circle cx="330" cy="50" r="80" fill="#fff" opacity=".18"/><circle cx="40" cy="350" r="70" fill="#fff" opacity=".15"/>${nails}</svg>`;
+}
+const gal=document.getElementById("gallery");
+works.forEach((w,i)=>{const f=document.createElement("figure");f.innerHTML=art(w,i)+`<figcaption>${w.t}</figcaption>`;f.onclick=()=>{lb.firstElementChild.innerHTML=art(w,"lb"+i);lb.classList.add("on")};gal.appendChild(f)});
+const lb=document.getElementById("lb");lb.onclick=()=>lb.classList.remove("on");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
